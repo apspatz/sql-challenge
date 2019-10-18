@@ -1,0 +1,41 @@
+dept_manager
+-
+dept_no varchar fk - departments.dept_no
+emp_no bigint fk - employees.emp_no
+from_date varchar
+to_date varchar
+
+departments
+-
+dept_no varchar pk
+dept_name varchar
+
+employees
+-
+emp_no bigint pk
+birth_date varchar
+first_name varchar
+last_name varchar
+gender varchar
+hire_date varchar
+
+titles
+-
+emp_no bigint fk - employees.emp_no
+title varchar pk
+from_date varchar
+to_date varchar
+
+dept_emp
+-
+emp_no bigint fk - employees.emp_no
+dept_no varchar fk - departments.dept_no
+from_date varchar
+to_date varchar
+	
+salaries
+-
+emp_no bigint fk - employees.emp_no
+salary bigint 
+from_date varchar
+to_date varchar
